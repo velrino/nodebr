@@ -1,0 +1,55 @@
+import { useState } from 'react';
+import { Drawer, Menu } from 'antd';
+import { MenuOutlined } from '@ant-design/icons';
+import { useMediaQuery } from 'react-responsive';
+
+export const SiteHeaderComponent = () => {
+    const [visible, setVisible] = useState(false);
+    const isDesktop = useMediaQuery({ minWidth: 768 });
+
+    const showDrawer = () => {
+        setVisible(true);
+    };
+
+    const closeDrawer = () => {
+        setVisible(false);
+    };
+
+    const renderDesktopNavbar = () => {
+        return (
+            <Menu mode="horizontal">
+                <Menu.Item key="1">Option 1</Menu.Item>
+                <Menu.Item key="2">Option 2</Menu.Item>
+                <Menu.Item key="3">Option 3</Menu.Item>
+            </Menu>
+        );
+    };
+
+    const renderMobileNavbar = () => {
+        return (
+            <div>
+                <MenuOutlined onClick={showDrawer} />
+                <Drawer
+                    title="Menu"
+                    placement="left"
+                    onClose={closeDrawer}
+                    open={visible}
+                    width={300}
+                    bodyStyle={{ padding: 0 }}
+                >
+                    <Menu mode="inline">
+                        <Menu.Item key="1">Option 1</Menu.Item>
+                        <Menu.Item key="2">Option 2</Menu.Item>
+                        <Menu.Item key="3">Option 3</Menu.Item>
+                    </Menu>
+                </Drawer>
+            </div>
+        );
+    };
+
+    return (
+        <div>
+            {isDesktop ? renderDesktopNavbar() : renderMobileNavbar()}
+        </div>
+    );
+};
