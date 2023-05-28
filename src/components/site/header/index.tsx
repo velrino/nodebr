@@ -48,7 +48,7 @@ export const SiteHeaderComponent = () => {
     };
 
     return (
-        <div>
+        <div className='header-navbar'>
             {isDesktop ? renderDesktopNavbar() : renderMobileNavbar()}
         </div>
     );
