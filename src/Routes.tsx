@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate, Outlet, useNavigate } from "react-router-dom"
 import { ProtectedRoutes, PublicRoutes } from "./utils/route"
-import { HomePage } from "./pages/home"
+import { SiteHomePage } from "./pages/site/home"
 import { SiteRoutesComponent } from "./components/site"
 
 export const MainRoutes = () => (
@@ -14,7 +14,7 @@ export const MainRoutes = () => (
     <Route path="/" element={<PublicRoutes />}>
       <Route path="/" element={<SiteRoutesComponent />}>
         <Route path="/" element={<Navigate replace to="home" />} />
-        <Route path="home" element={<HomePage />} />
+        <Route path="home" element={<SiteHomePage />} />
       </Route>
     </Route>
   </Routes>
