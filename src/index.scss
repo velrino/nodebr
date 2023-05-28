@@ -12,6 +12,51 @@ code {
     monospace;
 }
 
+$primary-color: #ff0000;
+$secondary-color: black;
+
+/* Webkit (Chrome, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0.073);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+}
+
+/* Firefox */
+::-moz-scrollbar {
+  width: 5px;
+}
+
+::-moz-scrollbar-thumb {
+  background-color: $primary-color;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $secondary-color;
+}
+
+/* Firefox */
+::-moz-scrollbar-track {
+  background-color: $secondary-color;
+}
+
+/* IE, Edge */
+::-ms-scrollbar-track {
+  background-color: $secondary-color;
+}
+
+/* IE, Edge */
+::-ms-scrollbar {
+  width: 5px;
+}
+
+::-ms-scrollbar-thumb {
+  background-color: $primary-color;
+}
+
 .base-content {
   min-height: 100vh;
   height: 100%;
@@ -54,9 +99,7 @@ code {
   }
 }
 
-.light-theme {
-
-}
+.light-theme {}
 
 .header-navbar {
   position: fixed;
@@ -91,3 +134,83 @@ code {
   }
 }
 
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.banner-title {
+  font-weight: bold;
+  color: $primary-color !important;
+  font-size: 2rem;
+  // margin-bottom: 0.5rem;
+}
+
+.banner-subtitle {
+  font-weight: bold;
+  color: white !important;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+}
+
+.bg-secondary {
+  background-color: $secondary-color;
+}
+
+.card-home {
+  @media (min-width: 767px) {
+    min-height: 600px;
+  }
+}
+
+.section-services {
+  margin-top: 2rem;
+
+  .services-title {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
+}
+
+.margin-top-medium {
+  margin-top: 1rem;
+}
+
+.padding-bottom-large {
+  padding-bottom: 3rem;
+}
+
+.desktop-image {
+  width: 100%;
+  display: block;
+}
+
+.mobile-image {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktop-image {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+    width: 100%;
+  }
+}
+
+.ant-float-btn-primary .ant-float-btn-body {
+  background-color: #25d366;
+}

@@ -17,10 +17,10 @@ export const SiteHeaderComponent = () => {
 
     const renderDesktopNavbar = () => {
         return (
-            <Menu mode="horizontal">
-                <Menu.Item key="1">Option 1</Menu.Item>
-                <Menu.Item key="2">Option 2</Menu.Item>
-                <Menu.Item key="3">Option 3</Menu.Item>
+            <Menu mode="horizontal" className='bg-secondary'>
+                <Menu.Item key="1">Home</Menu.Item>
+                <Menu.Item key="2">Serviços</Menu.Item>
+                <Menu.Item key="3">Sobre</Menu.Item>
             </Menu>
         );
     };
@@ -28,22 +28,23 @@ export const SiteHeaderComponent = () => {
     const renderMobileNavbar = () => {
         return (
             <div className='header-navbar-responsive'>
-                <div className="header-navbar-title">BRAND</div>
+                <div className="header-navbar-title">Ventura</div>
                 <div className="header-menu-responsive" onClick={showDrawer}>
                     <MenuOutlined className='header-menu-icon' />
                 </div>
                 <Drawer
-                    title="Menu"
+                    title="Ventura"
                     placement="right"
                     onClose={closeDrawer}
                     open={visible}
                     width={300}
-                    bodyStyle={{ padding: 0 }}
+                    headerStyle={{ background: 'black' }}
+                    bodyStyle={{ padding: 0, background: 'black' }}
                 >
-                    <Menu mode="inline">
-                        <Menu.Item key="1">Option 1</Menu.Item>
-                        <Menu.Item key="2">Option 2</Menu.Item>
-                        <Menu.Item key="3">Option 3</Menu.Item>
+                    <Menu mode="inline" className='bg-secondary'>
+                        <Menu.Item key="1">Home</Menu.Item>
+                        <Menu.Item key="2">Serviços</Menu.Item>
+                        <Menu.Item key="3">Sobre</Menu.Item>
                     </Menu>
                 </Drawer>
             </div>
