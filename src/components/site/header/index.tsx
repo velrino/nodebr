@@ -28,6 +28,7 @@ export const SiteHeaderComponent = () => {
     const renderMobileNavbar = () => {
         return (
             <div className='header-navbar-responsive'>
+                <div className="header-navbar-title">BRAND</div>
                 <div className="header-menu-responsive" onClick={showDrawer}>
                     <MenuOutlined className='header-menu-icon' />
                 </div>
