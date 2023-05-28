@@ -8,7 +8,7 @@ export function SiteRoutesComponent() {
     return (
         <>
             <SiteHeaderComponent />
-            <div className="site-content">
+            <div>
                 <Outlet context={[translate]} />
             </div>
         </>

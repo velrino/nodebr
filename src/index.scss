@@ -19,7 +19,6 @@ code {
 }
 
 .site-content {
-  padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -62,4 +61,33 @@ code {
 .header-navbar {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
+
+.full-image-crop {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.full-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+  background-color: red;
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  .full-image {
+    min-height: 100vh;
+    height: 100vh;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
