@@ -19,7 +19,7 @@ export const SiteHeaderComponent = () => {
         return (
             <Menu mode="horizontal" className='bg-secondary'>
                 <Menu.Item key="1">Home</Menu.Item>
-                <Menu.Item key="2">Serviços</Menu.Item>
+                <Menu.Item key="2">Lorem</Menu.Item>
                 <Menu.Item key="3">Sobre</Menu.Item>
             </Menu>
         );
@@ -28,12 +28,12 @@ export const SiteHeaderComponent = () => {
     const renderMobileNavbar = () => {
         return (
             <div className='header-navbar-responsive'>
-                <div className="header-navbar-title">Ventura</div>
+                <div className="header-navbar-title">NodeBr</div>
                 <div className="header-menu-responsive" onClick={showDrawer}>
                     <MenuOutlined className='header-menu-icon' />
                 </div>
                 <Drawer
-                    title="Ventura"
+                    title="NodeBr"
                     placement="right"
                     onClose={closeDrawer}
                     open={visible}
@@ -43,7 +43,7 @@ export const SiteHeaderComponent = () => {
                 >
                     <Menu mode="inline" className='bg-secondary'>
                         <Menu.Item key="1">Home</Menu.Item>
-                        <Menu.Item key="2">Serviços</Menu.Item>
+                        <Menu.Item key="2">Lorem</Menu.Item>
                         <Menu.Item key="3">Sobre</Menu.Item>
                     </Menu>
                 </Drawer>

@@ -21,7 +21,8 @@ code {
     monospace;
 }
 
-$primary-color: #ff0000;
+$primary-color: #026e00;
+$primary-color-hover: #014c00;
 $secondary-color: black;
 
 /* Webkit (Chrome, Safari, Opera) */
@@ -126,10 +127,12 @@ $secondary-color: black;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  object-position: center;
   object-fit: cover;
-  background-color: red;
+  background-color: $primary-color;
 }
 
 /* For mobile devices */
@@ -154,7 +157,7 @@ $secondary-color: black;
 
 .banner-title {
   font-weight: bold;
-  color: $primary-color !important;
+  // color: $primary-color !important;
   font-size: 2rem;
   // margin-bottom: 0.5rem;
 }
@@ -176,7 +179,7 @@ $secondary-color: black;
 
 .card-home {
   @media (min-width: 767px) {
-    min-height: 600px;
+    min-height: 650px;
   }
 }
 
@@ -194,6 +197,10 @@ $secondary-color: black;
 
 .margin-top-medium {
   margin-top: 1rem;
+}
+
+.margin-top-large {
+  margin-top: 2rem;
 }
 
 .padding-bottom-large {
@@ -222,4 +229,62 @@ $secondary-color: black;
 
 .ant-float-btn-primary .ant-float-btn-body {
   background-color: #25d366;
+}
+
+.button-primary {
+  background: $primary-color;
+  scale: 1.2;
+
+  &:hover {
+    background: $primary-color-hover !important;
+  }
+}
+
+.button-secondary {
+  background: $secondary-color;
+  scale: 1.2;
+
+  &:hover {
+    background: $primary-color-hover !important;
+  }
+}
+
+.horizontal-scroll-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+  position: relative;
+
+  .content-wrapper {
+    display: inline-block;
+    animation: scroll 2s linear infinite;
+    // background: red;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    img {
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.partner {
+  img {
+    height: 100px;
+    border-radius: 50%;
+  }
+}
+
+.section-full-screen {
+  min-height: 100vh;
 }

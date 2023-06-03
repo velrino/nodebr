@@ -1,40 +1,68 @@
-import { Card, Col, Row, Button, FloatButton } from 'antd';
-import { WhatsAppOutlined } from '@ant-design/icons';
+import { Card, Col, Row, Button, FloatButton, List } from 'antd';
+import { FaMeetup } from 'react-icons/fa';
 
 export const SiteHomePage = () => {
+    const meetupUrl = 'https://www.meetup.com/pt-BR/nodebr/';
+    const partners = [
+        {
+            img: "/photos/companies/google.png",
+            link: "google",
+        },
+        {
+            img: "/photos/companies/pagarme.png",
+            link: "pagarme",
+        },
+        {
+            img: "/photos/companies/lambda3.jpg",
+            link: "lambda3",
+        },
+        {
+            img: "/photos/companies/loft.jpg",
+            link: "loft",
+        },
+        {
+            img: "/photos/companies/pravaler.png",
+            link: "pravaler",
+        },
+        {
+            img: "/photos/companies/caelum.png",
+            link: "caelum",
+        }
+    ];
+
     return (<>
         <div className="full-image-crop">
-            <img src="/photos/banner-desktop.png" alt="Your Image" className="full-image desktop-image" />
-            <img src="/photos/banner-mobile.png" alt="Your Image" className="full-image mobile-image" />
+            <img src="/photos/people-community.jpg" alt="Your Image" className="full-image" />
+            {/* <img src="/photos/banner-mobile.png" alt="Your Image" className="full-image mobile-image" /> */}
             <div className="text-overlay">
-                <div className="banner-title">BORA TREINAR</div>
-                <div className="banner-subtitle">É hora de EVOLUIR!</div>
-                <Button type="primary" className='bg-primary' href='https://wa.me/+5511942470818' target='_blank'>Agende uma aula</Button>
+                <div className="banner-title">NODEBR</div>
+                <div className="banner-subtitle">Comunidade brasileira para ​quem tem interesse em ​aprender e se aprofundar ​em NodeJS</div>
+                <Button type="primary" className='button-primary margin-top-medium' href={meetupUrl} target='_blank'>Faça parte da comunidade no meetup</Button>
             </div>
         </div>
         <div className="site-content margin-top-medium padding-bottom-large">
             <Row gutter={[16, 16]} justify={"center"}>
                 <Col xs={24} sm={18}>
                     <Row gutter={[16, 16]} className='section-services'>
-                        <Col span={24} className='services-title'>Serviços</Col>
+                        <Col span={24} className='services-title'>Somos uma comunidade de devs para devs</Col>
                         <Col xs={24} sm={8}>
-                            <Card title="Treinamento Personalizado" className='bg-primary card-home' cover={<img alt="example" src="/photos/team.jpg" />}>
+                            <Card title="+4.000 MEMBROS ​NO MEETUP" className='bg-primary card-home' cover={<img alt="example" src="/photos/people.jpg" />}>
                                 <p>
-                                    Desenvolva comigo um programa de treinamento personalizado de acordo com as necessidades e metas individuais.
+                                    Estamos sempre por lá divulgando eventos online e presencial
                                 </p>
                             </Card>
                         </Col>
                         <Col xs={24} sm={8}>
-                            <Card title="Avaliações físicas" className='bg-primary card-home' cover={<img alt="example" src="/photos/workout.jpg" />}>
+                            <Card title="CURSO NODEJS ​PARA INCIANTES" className='bg-primary card-home' cover={<img alt="example" src="/photos/people-2.jpg" />}>
                                 <p>
-                                    Realize avaliações físicas completas para identificar o nível atual de condicionamento físico dos clientes.
+                                    Um dos maiores cursos online que já ajudou milhares de devs a entrarem no mercado
                                 </p>
                             </Card>
                         </Col>
                         <Col xs={24} sm={8}>
-                            <Card title="Planejamento de Metas" className='bg-primary card-home' cover={<img alt="example" src="/photos/example.jpg" />}>
+                            <Card title="NODEJS DO BÁSICO ​AO AVANÇADO" className='bg-primary card-home' cover={<img alt="example" src="/photos/people-3.jpg" />}>
                                 <p>
-                                    Ajudo meus clientes a estabelecer metas realistas e mensuráveis, acompanhando e ajustando o plano de treinamento conforme necessário.
+                                    Entregues de forma gratuita para a comunidade
                                 </p>
                             </Card>
                         </Col>
@@ -47,22 +75,32 @@ export const SiteHomePage = () => {
         </div>
         <div className="full-image-crop bg-primary">
             <div className="text-overlay">
-                <div className="banner-title">Sobre titulo</div>
-                <div className="banner-subtitle">Sobre subtitulo</div>
-                <Button type="primary" className='bg-primary' href='https://wa.me/+5511942470818' target='_blank'>BUTTON</Button>
+                <Row gutter={[16, 16]} justify={"center"}>
+                    <Col xs={24} sm={18}>
+                        <Row gutter={[16, 16]} className='section-services' justify={'center'}>
+                            <Col span={24} className='services-title'>Empresas que ao longo desses anos já apoiaram a comunidade</Col>
+                            {
+                                partners.map((item: any) => (<Col xs={8} sm={2} className='partner'>
+                                    <img alt="example" src={item.img} />
+                                </Col>))
+                            }
+                        </Row>
+                    </Col>
+                </Row>
+                <Button type="primary" className='button-secondary margin-top-large' href={meetupUrl} target='_blank'>Nos apoie com sua empresa</Button>
             </div>
         </div>
         <div className="full-image-crop">
             <div className="text-overlay">
                 <div className="banner-title">Outra section</div>
                 <div className="banner-subtitle">Sobre subtitulo</div>
-                <Button type="primary" className='bg-primary' href='https://wa.me/+5511942470818' target='_blank'>BUTTON</Button>
+                <Button type="primary" className='bg-primary' href={meetupUrl} target='_blank'>BUTTON</Button>
             </div>
         </div>
         <FloatButton
             type="primary"
-            href='https://wa.me/+5511942470818' target='_blank'
+            href={meetupUrl} target='_blank'
             className='bg-primary'
-            icon={<WhatsAppOutlined />} />
+            icon={<FaMeetup />} />
     </>)
 }
