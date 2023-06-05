@@ -22,8 +22,9 @@ code {
 }
 
 $primary-color: #22aa27;
-$primary-color-hover: #014c00;
+$primary-color-hover: #187e1b;
 $secondary-color: #0e110e;
+$secondary-color-optional: #0e110ec7;
 
 /* Webkit (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
@@ -104,8 +105,12 @@ $secondary-color: #0e110e;
   color: white;
 
   .header-navbar-responsive {
-    background: $secondary-color;
-    border-bottom: 1px solid #3f3f3f;
+    background-color: transparent;
+    
+    &.header-scrolled {
+      background-color: $secondary-color;
+      border-bottom: 1px solid #3f3f3f;
+    }
   }
 }
 
@@ -185,6 +190,21 @@ $secondary-color: #0e110e;
 .card-home {
   @media (min-width: 767px) {
     min-height: 650px;
+  }
+
+  .card-home-title {
+    text-align: center;
+  }
+
+  .ant-card-body {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  .card-home-text {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -284,6 +304,8 @@ $secondary-color: #0e110e;
 }
 
 .partner {
+  cursor: pointer;
+
   img {
     height: 100px;
     border-radius: 50%;
@@ -304,4 +326,72 @@ $secondary-color: #0e110e;
   img {
     border-radius: 0 !important;
   }
+}
+
+.header-navbar-desktop {
+  min-height: 100px;
+  height: 100px;
+  background: transparent;
+
+  &.header-scrolled {
+    background-color: $secondary-color;
+    border-bottom: 1px solid rgba(127, 127, 127, 0.58);
+  }
+}
+
+.header-desktop-navbar-menu {
+  display: flex;
+
+  .header-desktop-navbar-menu-logo {
+    text-align: center;
+  }
+
+  .header-desktop-navbar-menu-item {
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+}
+
+.min-full-height {
+  min-height: 100vh;
+}
+
+.header-responsive-navbar-menu-logo {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center center;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  cursor: pointer;
+  img {
+    display: none;
+  }
+}
+
+.header-scrolled {
+  .header-responsive-navbar-menu-logo {
+    img {
+      display: block;
+    }
+  }
+}
+
+.header-responsive-navbar-menu-bt {
+  position: absolute;
+  right: 20px;
+  color: $primary-color;
+  cursor: pointer;
 }
