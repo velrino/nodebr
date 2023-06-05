@@ -21,9 +21,9 @@ code {
     monospace;
 }
 
-$primary-color: #026e00;
+$primary-color: #22aa27;
 $primary-color-hover: #014c00;
-$secondary-color: black;
+$secondary-color: #0e110e;
 
 /* Webkit (Chrome, Safari, Opera) */
 ::-webkit-scrollbar {
@@ -100,11 +100,11 @@ $secondary-color: black;
 }
 
 .dark-theme {
-  background-color: black;
+  background-color: $secondary-color;
   color: white;
 
   .header-navbar-responsive {
-    background: black;
+    background: $secondary-color;
     border-bottom: 1px solid #3f3f3f;
   }
 }
@@ -155,6 +155,11 @@ $secondary-color: black;
   text-align: center;
 }
 
+.text-overlay-content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .banner-title {
   font-weight: bold;
   // color: $primary-color !important;
@@ -165,7 +170,7 @@ $secondary-color: black;
 .banner-subtitle {
   font-weight: bold;
   color: white !important;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 0.5rem;
 }
 
@@ -287,4 +292,16 @@ $secondary-color: black;
 
 .section-full-screen {
   min-height: 100vh;
+}
+
+.ant-card-head {
+  border-bottom: 0 !important;
+}
+
+.ant-card-cover {
+  padding: 0.5rem;
+
+  img {
+    border-radius: 0 !important;
+  }
 }

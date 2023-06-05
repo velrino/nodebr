@@ -42,8 +42,8 @@ export const SiteHeaderComponent = () => {
                     onClose={closeDrawer}
                     open={visible}
                     width={300}
-                    headerStyle={{ background: 'black' }}
-                    bodyStyle={{ padding: 0, background: 'black' }}
+                    headerStyle={{ background: '#0e110e' }}
+                    bodyStyle={{ padding: 0, background: '#0e110e' }}
                 >
                     <Menu mode="inline" className='bg-secondary'>
                         <Menu.Item key="1">Home</Menu.Item>
