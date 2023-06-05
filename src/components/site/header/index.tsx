@@ -28,12 +28,16 @@ export const SiteHeaderComponent = () => {
     const renderMobileNavbar = () => {
         return (
             <div className='header-navbar-responsive'>
-                <div className="header-navbar-title">NodeBr</div>
+                <div className="header-navbar-title">
+                    <img alt="example" src="/photos/logo-white.png" height={25} />
+                </div>
                 <div className="header-menu-responsive" onClick={showDrawer}>
                     <MenuOutlined className='header-menu-icon' />
                 </div>
                 <Drawer
-                    title="NodeBr"
+                    title={<>
+                        <img alt="example" src="/photos/logo-white.png" height={25} />
+                    </>}
                     placement="right"
                     onClose={closeDrawer}
                     open={visible}

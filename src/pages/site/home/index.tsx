@@ -35,7 +35,9 @@ export const SiteHomePage = () => {
             <img src="/photos/people-community.jpg" alt="Your Image" className="full-image" />
             {/* <img src="/photos/banner-mobile.png" alt="Your Image" className="full-image mobile-image" /> */}
             <div className="text-overlay">
-                <div className="banner-title">NODEBR</div>
+                <img alt="example" src="/photos/logo-white.png" height={75} />
+
+                {/* <div className="banner-title">NODEBR</div> */}
                 <div className="banner-subtitle">Comunidade brasileira para ​quem tem interesse em ​aprender e se aprofundar ​em NodeJS</div>
                 <Button type="primary" className='button-primary margin-top-medium' href={meetupUrl} target='_blank'>Faça parte da comunidade no meetup</Button>
             </div>

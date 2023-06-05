@@ -1,4 +1,8 @@
+@import '~@fontsource/montserrat';
+
+
 html {
+  font-family: 'Montserrat', sans-serif;
   touch-action: pan-x pan-y;
   touch-callout: none;
   -webkit-user-select: none;
@@ -9,11 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Montserrat', sans-serif;
 }
 
 code {
