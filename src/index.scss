@@ -1,4 +1,5 @@
 @import '~@fontsource/montserrat';
+@import 'animate.css';
 
 
 html {
@@ -106,7 +107,7 @@ $secondary-color-optional: #0e110ec7;
 
   .header-navbar-responsive {
     background-color: transparent;
-    
+
     &.header-scrolled {
       background-color: $secondary-color;
       border-bottom: 1px solid #3f3f3f;
@@ -256,6 +257,16 @@ $secondary-color-optional: #0e110ec7;
   background-color: #25d366;
 }
 
+.button-base {
+  min-width: 15vw;
+  text-transform: uppercase;
+  font-weight: bold;
+
+  @media (max-width: 767px) {
+    min-width: 60vw;
+  }
+}
+
 .button-primary {
   background: $primary-color;
   scale: 1.2;
@@ -376,6 +387,7 @@ $secondary-color-optional: #0e110ec7;
   justify-content: center;
   background-size: contain;
   cursor: pointer;
+
   img {
     display: none;
   }
@@ -394,4 +406,41 @@ $secondary-color-optional: #0e110ec7;
   right: 20px;
   color: $primary-color;
   cursor: pointer;
+}
+
+.center-content {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-team {
+  @media (min-width: 767px) {
+    min-height: 250px;
+  }
+
+  .card-team-title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .ant-card-body {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+
+  .card-team-text {
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.social-icon {
+  color: white;
+  font-size: 1.7rem;
+  &:hover {
+    color: rgb(202, 202, 202);
+  }
 }

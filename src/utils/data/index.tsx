@@ -1,3 +1,5 @@
+import { BsLinkedin, BsInstagram, BsGlobe } from 'react-icons/bs';
+
 export const CardHomeData = [
     {
         title: "+4.000 MEMBROS ​NO MEETUP",
@@ -42,3 +44,94 @@ export const PartnersData = [
         link: "caelum",
     }
 ];
+
+export const TeamData = [
+    {
+        name: "ERICK WENDEL",
+        img: "/photos/team/erick-wendel.jpg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/erickwendel/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/erickwendel_/'
+            },
+            {
+                label: 'site',
+                icon: <BsGlobe />,
+                link: 'https://linktr.ee/erickwendel'
+            }
+        ]
+    },
+    {
+        name: "Ana neri",
+        img: "/photos/team/ana-neri.jpg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/ananeridev/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/ananeridev/'
+            },
+            {
+                label: 'site',
+                icon: <BsGlobe />,
+                link: 'https://beacons.ai/ananeridev'
+            }
+        ]
+    },
+    {
+        name: "Igor Luiz Halfeld",
+        img: "/photos/team/halfeld.jpg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/igorhalfeld/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/igorhalfeld/'
+            },
+            {
+                label: 'site',
+                icon: <BsGlobe />,
+                link: 'https://www.igorhalfeld.com/'
+            }
+        ]
+    },
+    {
+        name: "Lucas Santos",
+        img: "/photos/team/lucas.jpg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/lsantosdev/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/lsantosdev/'
+            },
+            {
+                label: 'site',
+                icon: <BsGlobe />,
+                link: 'https://lsantos.dev/'
+            }
+        ]
+    },
+]
