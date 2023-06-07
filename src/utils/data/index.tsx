@@ -1,4 +1,6 @@
-import { BsLinkedin, BsInstagram, BsGlobe } from 'react-icons/bs';
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaMeetup } from 'react-icons/fa';
+import { BsLinkedin, BsInstagram, BsGlobe, BsYoutube, BsFacebook } from 'react-icons/bs';
+import { TfiYoutube } from 'react-icons/tfi';
 
 export const CardHomeData = [
     {
@@ -91,28 +93,6 @@ export const TeamData = [
         ]
     },
     {
-        name: "Igor Luiz Halfeld",
-        img: "/photos/team/halfeld.jpg",
-        text: "Estamos sempre por lá divulgando eventos online e presencial",
-        social: [
-            {
-                label: 'linkedin',
-                icon: <BsLinkedin />,
-                link: 'https://www.linkedin.com/in/igorhalfeld/'
-            },
-            {
-                label: 'instagram',
-                icon: <BsInstagram />,
-                link: 'https://www.instagram.com/igorhalfeld/'
-            },
-            {
-                label: 'site',
-                icon: <BsGlobe />,
-                link: 'https://www.igorhalfeld.com/'
-            }
-        ]
-    },
-    {
         name: "Lucas Santos",
         img: "/photos/team/lucas.jpg",
         text: "Estamos sempre por lá divulgando eventos online e presencial",
@@ -134,4 +114,142 @@ export const TeamData = [
             }
         ]
     },
+    {
+        name: "Monica Craveiro de Menezes",
+        img: "/photos/team/monica.jpg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/mocraveirodev/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/mocraveirodev/'
+            },
+            {
+                label: 'site',
+                icon: <BsGlobe />,
+                link: 'https://5tr.in/mocraveirodev/'
+            }
+        ]
+    },
+    {
+        name: "Mayumi Shingaki",
+        img: "/photos/team/mayumi.jpg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/mayumi-shingaki/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/mayumidev/'
+            },
+            {
+                label: 'site',
+                icon: <BsGlobe />,
+                link: 'https://linktr.ee/mayumidev'
+            }
+        ]
+    },
+    {
+        name: "Natiely Alves",
+        img: "/photos/team/natiely.jpeg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/natiely-schmitt-8b231a275/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/naah_schmitt/'
+            },
+        ]
+    },
+    {
+        name: "Denis Velrino",
+        img: "/photos/team/velrino.jpeg",
+        text: "Estamos sempre por lá divulgando eventos online e presencial",
+        social: [
+            {
+                label: 'linkedin',
+                icon: <BsLinkedin />,
+                link: 'https://www.linkedin.com/in/velrino/'
+            },
+            {
+                label: 'instagram',
+                icon: <BsInstagram />,
+                link: 'https://www.instagram.com/velrino/'
+            },
+        ]
+    },
+]
+
+export const SocialData = [
+    {
+        label: 'meetup',
+        icon: <FaMeetup />,
+        link: 'https://www.meetup.com/pt-BR/nodebr/'
+    },
+    {
+        label: 'linkedin',
+        icon: <FaLinkedinIn />,
+        link: 'https://www.linkedin.com/company/nodebr/'
+    },
+    {
+        label: 'instagram',
+        icon: <BsInstagram />,
+        link: 'https://www.instagram.com/node_br/'
+    },
+    {
+        label: 'youTube',
+        icon: <TfiYoutube />,
+        link: 'https://www.youtube.com/@NodeBRjs'
+    },
+    {
+        label: 'twitter',
+        icon: <FaTwitter />,
+        link: 'https://twitter.com/nodebr'
+    },
+    {
+        label: 'facebook',
+        icon: <FaFacebookF />,
+        link: 'https://www.facebook.com/brnode'
+    },
+]
+
+export const MenuData = [
+    {
+        label: 'Home',
+        link: 'section_home',
+    },
+    {
+        label: 'Sobre',
+        link: 'section_about',
+    },
+    {
+        label: 'Apoie',
+        link: 'section_support',
+    },
+    {
+        label: 'Faça parte',
+        link: 'section_voluntary',
+    },
+    {
+        label: 'Time',
+        link: 'section_team',
+    },
+    {
+        label: 'Redes sociais',
+        link: 'section_social',
+    }
 ]

@@ -110,7 +110,7 @@ $secondary-color-optional: #0e110ec7;
 
     &.header-scrolled {
       background-color: $secondary-color;
-      border-bottom: 1px solid #3f3f3f;
+      border-bottom: 1px solid $primary-color-hover;
     }
   }
 }
@@ -189,12 +189,17 @@ $secondary-color-optional: #0e110ec7;
 }
 
 .card-home {
-  @media (min-width: 767px) {
+  @media (min-width: 821px) {
     min-height: 650px;
+  }
+
+  @media (max-width: 767px) {
+    min-height: 250px;
   }
 
   .card-home-title {
     text-align: center;
+    font-weight: bold;
   }
 
   .ant-card-body {
@@ -219,6 +224,10 @@ $secondary-color-optional: #0e110ec7;
     text-transform: uppercase;
     margin-bottom: 2rem;
   }
+}
+
+.margin-bottom-medium {
+  margin-bottom: 1rem;
 }
 
 .margin-top-medium {
@@ -261,6 +270,10 @@ $secondary-color-optional: #0e110ec7;
   min-width: 15vw;
   text-transform: uppercase;
   font-weight: bold;
+
+  @media (max-width: 821px) {
+    min-width: 30vw;
+  }
 
   @media (max-width: 767px) {
     min-width: 60vw;
@@ -346,7 +359,7 @@ $secondary-color-optional: #0e110ec7;
 
   &.header-scrolled {
     background-color: $secondary-color;
-    border-bottom: 1px solid rgba(127, 127, 127, 0.58);
+    border-bottom: 1px solid $primary-color-hover;
   }
 }
 
@@ -361,11 +374,18 @@ $secondary-color-optional: #0e110ec7;
     margin-right: 1rem;
     font-size: 1rem;
     font-weight: bold;
+    // border-right: 1px solid white;
+    padding-right: .5rem;
 
     &:hover {
       text-decoration: underline;
       cursor: pointer;
       color: $primary-color;
+      border-color: $primary-color;
+    }
+
+    &:last-child {
+      border: 0;
     }
   }
 }
@@ -423,6 +443,7 @@ $secondary-color-optional: #0e110ec7;
   .card-team-title {
     text-align: center;
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   .ant-card-body {
@@ -440,7 +461,38 @@ $secondary-color-optional: #0e110ec7;
 .social-icon {
   color: white;
   font-size: 1.7rem;
+
   &:hover {
     color: rgb(202, 202, 202);
   }
+}
+
+.social-icon-large {
+  font-size: 3rem;
+}
+
+.social-square {
+  padding: 1rem;
+  background: $secondary-color;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background-color: #1a211a;
+  }
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.ant-menu-item-selected {
+  color: white !important;
+  background-color: $primary-color-hover !important;
+}
+
+.clickable {
+  cursor: pointer;
 }
